@@ -1,0 +1,59 @@
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* horizontally center */
+    justify-content: center;
+    /* vertically center */
+    text-align: center;
+    /* center text inside */
+    color: azure;
+}
+
+.userDetails {
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    background-color: rgba(26, 144, 139, 1);
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 23vw;
+    margin-top: 2vw;
+    color: azure;
+    border-top: 1px solid;
+}
+
+.footerContent1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 4vw;
+    height: 3vw;
+}

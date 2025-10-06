@@ -1,0 +1,95 @@
+<div class="personalinfo">
+    <h2 class="section-title">PERSONAL INFORMATION</h2>
+
+    <div class="profile-card">
+        <div class="avatar">
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="details">
+            <h4>{{isInfirstname}}</h4>
+            <p>{{isemail}}</p>
+        </div>
+    </div>
+
+    <form [formGroup]="personalInfoForm" (ngSubmit)="onSubmit()">
+        <div class="row form-row-spacing">
+            <div class="col-md-6 form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" class="form-control"
+                    formControlName="firstName" placeholder="Test">
+            </div>
+
+            <div class="col-md-6 form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="form-control"
+                    formControlName="lastName" placeholder="Test">
+            </div>
+        </div>
+
+        <div class="row form-row-spacing">
+            <div class="col-md-6 form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control"
+                    formControlName="email" placeholder="test@yopmail.com">
+            </div>
+
+            <div class="col-md-6 form-group phone-group">
+                <label for="phoneNumber">Phone Number</label>
+                <div class="input-group" style="display: flex;">
+                    <select class="countrycode" formControlName="countryCode"
+                        style="width: 6vw;">
+                        <option value disabled selected>Select</option>
+                        <option *ngFor="let country of countries"
+                            [value]="country.code">
+                            +{{country.code}}
+                        </option>
+                    </select>
+                    <input type="tel" id="phoneNumber" class="form-control"
+                        formControlName="phoneNumber" placeholder="98563214"
+                        style="width: 23.6svw;">
+                </div>
+            </div>
+        </div>
+
+        <div class="row form-row-spacing password-section">
+            <div class="col-md-6 form-group">
+                <label for="oldPassword">Old Password</label>
+                <div class="input-group password-input">
+                    <input type="password" id="oldPassword" class="form-control"
+                        formControlName="oldPassword"
+                        placeholder="Enter your current password">
+                    <!-- <i class="fas fa-eye-slash toggle-password"></i> -->
+                </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+                <label for="newPassword">New Password</label>
+                <div class="input-group password-input">
+                    <input type="password" id="newPassword" class="form-control"
+                        formControlName="newPassword"
+                        placeholder="Enter your new password">
+                    <!-- <i class="fas fa-eye-slash toggle-password"></i> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row form-row-spacing">
+            <div class="col-md-6 form-group">
+                <label for="confirmNewPassword">Confirm new Password</label>
+                <div class="input-group password-input">
+                    <input type="password" id="confirmNewPassword"
+                        class="form-control"
+                        formControlName="confirmNewPassword"
+                        placeholder="Confirm your new password">
+                    <!-- <i class="fas fa-eye-slash toggle-password"></i> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row button-row">
+            <div class="col-12">
+                <button type="submit" class="btn save-btn">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

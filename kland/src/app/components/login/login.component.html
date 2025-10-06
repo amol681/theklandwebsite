@@ -1,0 +1,46 @@
+<div class="mainContainer">
+    <div class="login-container">
+        <img src="https://thekland.com/assets/images/logo.png" alt="Logo"
+            class="login-logo" />
+        <h2>Enter your email to continue</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <input type="text" formControlName="email" placeholder="Email" />
+            <div
+                *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('required')"
+                class="error">
+                Email is required
+            </div>
+            <div
+                *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('email')"
+                class="error">
+                Please enter a valid email address
+            </div>
+            <div
+                *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('pattern')"
+                class="error">
+                Only yopmail addresses are allowed
+            </div>
+
+            <input type="password" formControlName="password"
+                placeholder="Password" />
+            <div
+                *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']"
+                class="error">
+                Password is required
+            </div>
+            <div
+                *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['minlength']"
+                class="error">
+                Minimum 5 characters required
+            </div>
+            <div class="forgot-password">
+                <a routerLink="/forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+        </form>
+        <div class="create-account">
+            Don't have an account? <a routerLink="/register">Create Account</a>
+        </div>
+    </div>
+</div>

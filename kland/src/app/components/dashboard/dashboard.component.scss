@@ -1,0 +1,67 @@
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(26, 144, 139, 1);
+    color: azure;
+    width: 80%;
+    height: 15vw;
+}
+
+.account-title {
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+    margin-top: 2vw;
+}
+
+.account-body-container {
+    display: flex;
+    margin-top: 2vw;
+    margin-left: 3vw;
+}
+
+.headercontainer {
+    display: flex;
+    align-items: center;
+    width: 74%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    margin-top: -1.5vw;
+}
+
+.row {
+    display: flex;
+    width: 80%;
+}
+
+.sidebar {
+    width: 22vw;
+}
+
+.personalinfo {
+    width: 57vw;
+}
+
+img {
+    width: 5vw;
+    height: 4vw;
+    margin-left: -14vw;
+}
+
+.myaccountheader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

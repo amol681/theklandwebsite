@@ -1,0 +1,30 @@
+.sidebar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1vw;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vw;
+
+}
+
+nav {
+    width: 200px;
+}
+
+ul li {
+    border-bottom: 1px solid #959595;
+    padding-left: 1vw;
+    height: 1.5vw;
+}

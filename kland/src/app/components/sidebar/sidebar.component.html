@@ -1,0 +1,31 @@
+<div class="sidebar">
+  <nav class="account-nav">
+    <ul>
+      <li class="active">
+        <a routerLink="/edit-profile">
+          <i class="fa-solid fa-user-pen"></i> Edit Profile
+        </a>
+      </li>
+      <li>
+        <a routerLink="/faqs">
+          <i class="fas fa-question-circle"></i> FAQS
+        </a>
+      </li>
+      <li>
+        <a routerLink="/contact-us">
+          <i class="fas fa-phone"></i> Contact Us
+        </a>
+      </li>
+      <li>
+        <a routerLink="/delete-account" class="delete-link">
+          <i class="fa-solid fa-user-xmark"></i> Delete Account
+        </a>
+      </li>
+      <li style="border: none;color: red;">
+        <a (click)="logout()" class="logout-link">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
