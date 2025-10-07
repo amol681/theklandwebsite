@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../../services/api.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +20,7 @@ export class LoginComponent {
     private fb: FormBuilder,
     private router: Router,
     private api: ApiService,
+    private toaster: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -51,7 +53,12 @@ export class LoginComponent {
       sessionStorage.setItem('phone',res.data.phone);
       sessionStorage.setItem('email',res.data.email);
       sessionStorage.setItem('password',res.data.password)
+      this.toaster.success('login successfully...!');
       this.router.navigate(['/dashboard']);
-    })
+    },
+    (error) => {
+        this.toaster.warning('Something Went Wrong......!');
+      }
+  );
   }
 }
